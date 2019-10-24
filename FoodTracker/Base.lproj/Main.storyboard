@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lpq-BH-kEx">
-                                <rect key="frame" x="20" y="20" width="335" height="428.5"/>
+                                <rect key="frame" x="20" y="20" width="335" height="546.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-A6-XIe">
                                         <rect key="frame" x="0.0" y="0.0" width="86.5" height="20.5"/>
@@ -46,6 +46,9 @@
                                             <outletCollection property="gestureRecognizers" destination="obW-Fo-WGJ" appends="YES" id="LD7-kL-XaZ"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="X7w-n6-E0A" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="436.5" width="107" height="110"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="P3u-dZ-jGj" secondAttribute="trailing" id="gQR-IR-F4S"/>
@@ -54,6 +57,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lpq-BH-kEx" secondAttribute="bottom" constant="100.5" id="Cdi-bz-Phz"/>
                             <constraint firstItem="lpq-BH-kEx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KV9-Pg-GvT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lpq-BH-kEx" secondAttribute="trailing" constant="20" id="Ng2-Dy-4G9"/>
                             <constraint firstItem="lpq-BH-kEx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UFE-sv-dQt"/>
@@ -73,7 +77,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="132" y="137"/>
+            <point key="canvasLocation" x="132" y="136.28185907046478"/>
         </scene>
     </scenes>
     <resources>
