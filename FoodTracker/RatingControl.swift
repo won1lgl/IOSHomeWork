@@ -11,7 +11,11 @@ import UIKit
 @IBDesignable class RatingControl: UIStackView {
     //MARK:Properties
     private var ratingButtons = [UIButton]()
-    var rating = 0
+    var rating = 0 {
+        didSet{
+            updateButtonSelectionState()
+        }
+    }
     
     @IBInspectable var starSize: CGSize = CGSize(width: 44.0, height: 44.0) {
         didSet {
@@ -39,7 +43,16 @@ import UIKit
     
     //MARK:Button Action
     @objc func ratingButtonTapped(button: UIButton) {
-        print("Button pressed 👍")
+        guard let index = ratingButtons.firstIndex(of: button) else {
+            fatalError("the button,\(button),is not the member of \(ratingButtons)")
+        }
+        let selectedRating = index + 1
+        if selectedRating == rating {
+            rating = 0
+        } else {
+            rating = selectedRating
+        }
+        
     }
     
     //MARK:Private Methods
@@ -78,7 +91,17 @@ import UIKit
             
             //add button to array
             ratingButtons.append(button)
+            
         }
+        
+        updateButtonSelectionState()
+        
     }
     
+    //update button UI
+    private func updateButtonSelectionState() {
+        for(index, button) in ratingButtons.enumerated() {
+            button.isSelected = index < rating
+        }
+    }
 }
