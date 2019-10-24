@@ -53,8 +53,17 @@ import UIKit
         ratingButtons.removeAll()
         
         for _ in 0..<starCount {
+            //load button images
+            let bundle = Bundle(for: type(of: self))
+            let filledStar = UIImage(named: "filledStar", in: bundle, compatibleWith: self.traitCollection)
+            let emptyStar = UIImage(named: "emptyStar", in: bundle, compatibleWith: self.traitCollection)
+            let hignlightedStar = UIImage(named: "highlightedStar", in: bundle, compatibleWith: self.traitCollection)
+            
             let button = UIButton()
-            button.backgroundColor = UIColor.red
+            button.setImage(emptyStar, for: .normal)
+            button.setImage(filledStar, for: .selected)
+            button.setImage(hignlightedStar, for: .highlighted)
+            button.setImage(hignlightedStar, for: [.selected, .highlighted])
             
             //Add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
