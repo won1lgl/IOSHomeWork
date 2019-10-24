@@ -14,6 +14,7 @@
 		04967FCC2361523D00D30277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04967FCB2361523D00D30277 /* Assets.xcassets */; };
 		04967FCF2361523D00D30277 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04967FCD2361523D00D30277 /* LaunchScreen.storyboard */; };
 		04967FDA2361523D00D30277 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04967FD92361523D00D30277 /* FoodTrackerTests.swift */; };
+		04967FE52361B87300D30277 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04967FE42361B87300D30277 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		04967FD52361523D00D30277 /* FoodTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04967FD92361523D00D30277 /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		04967FDB2361523D00D30277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04967FE42361B87300D30277 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				04967FC22361523C00D30277 /* AppDelegate.swift */,
 				04967FC42361523C00D30277 /* SceneDelegate.swift */,
 				04967FC62361523C00D30277 /* ViewController.swift */,
+				04967FE42361B87300D30277 /* RatingControl.swift */,
 				04967FC82361523C00D30277 /* Main.storyboard */,
 				04967FCB2361523D00D30277 /* Assets.xcassets */,
 				04967FCD2361523D00D30277 /* LaunchScreen.storyboard */,
@@ -200,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04967FE52361B87300D30277 /* RatingControl.swift in Sources */,
 				04967FC72361523C00D30277 /* ViewController.swift in Sources */,
 				04967FC32361523C00D30277 /* AppDelegate.swift in Sources */,
 				04967FC52361523C00D30277 /* SceneDelegate.swift in Sources */,
