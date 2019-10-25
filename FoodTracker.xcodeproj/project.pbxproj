@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		046657082362A8B7005D7FFF /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046657072362A8B7005D7FFF /* Meal.swift */; };
+		0466570A2362D42F005D7FFF /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046657092362D42F005D7FFF /* MealTableViewCell.swift */; };
+		0466570C2362E276005D7FFF /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466570B2362E276005D7FFF /* MealTableViewController.swift */; };
 		04967FC32361523C00D30277 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04967FC22361523C00D30277 /* AppDelegate.swift */; };
 		04967FC52361523C00D30277 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04967FC42361523C00D30277 /* SceneDelegate.swift */; };
 		04967FC72361523C00D30277 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04967FC62361523C00D30277 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		046657072362A8B7005D7FFF /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		046657092362D42F005D7FFF /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		0466570B2362E276005D7FFF /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		04967FBF2361523C00D30277 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04967FC22361523C00D30277 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04967FC42361523C00D30277 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				04967FC62361523C00D30277 /* ViewController.swift */,
 				04967FE42361B87300D30277 /* RatingControl.swift */,
 				046657072362A8B7005D7FFF /* Meal.swift */,
+				046657092362D42F005D7FFF /* MealTableViewCell.swift */,
+				0466570B2362E276005D7FFF /* MealTableViewController.swift */,
 				04967FC82361523C00D30277 /* Main.storyboard */,
 				04967FCB2361523D00D30277 /* Assets.xcassets */,
 				04967FCD2361523D00D30277 /* LaunchScreen.storyboard */,
@@ -208,6 +214,8 @@
 			files = (
 				046657082362A8B7005D7FFF /* Meal.swift in Sources */,
 				04967FE52361B87300D30277 /* RatingControl.swift in Sources */,
+				0466570C2362E276005D7FFF /* MealTableViewController.swift in Sources */,
+				0466570A2362D42F005D7FFF /* MealTableViewCell.swift in Sources */,
 				04967FC72361523C00D30277 /* ViewController.swift in Sources */,
 				04967FC32361523C00D30277 /* AppDelegate.swift in Sources */,
 				04967FC52361523C00D30277 /* SceneDelegate.swift in Sources */,
