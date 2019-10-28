@@ -121,7 +121,6 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Z0y-Hj-aJs">
                             <connections>
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="GzW-qC-eX1"/>
-                                <segue destination="7TB-EH-Pft" kind="unwind" unwindAction="unwindtoMeallistWithSender:" id="bWs-tb-TBr"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nh7-zq-yAa">
