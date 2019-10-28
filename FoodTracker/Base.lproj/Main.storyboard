@@ -23,16 +23,16 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="KTG-7Z-euF">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="KTG-7Z-euF">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk9-zJ-RhP">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk9-zJ-RhP">
                                             <rect key="frame" x="98" y="11" width="261" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Q1-ig-cGM" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Q1-ig-cGM" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                             <rect key="frame" x="98" y="35" width="252" height="44"/>
                                         </stackView>
                                     </subviews>
@@ -52,6 +52,7 @@
                                     <outlet property="nameLabel" destination="tk9-zJ-RhP" id="w5g-6b-ouM"/>
                                     <outlet property="photoImageView" destination="KTG-7Z-euF" id="gjz-Pc-Y1d"/>
                                     <outlet property="ratingControl" destination="9Q1-ig-cGM" id="6rB-yp-OSE"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="KXp-Qu-aDd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -88,8 +89,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-CE-pGq">
-                                        <rect key="frame" x="7.5" y="83.5" width="320" height="320"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-CE-pGq">
+                                        <rect key="frame" x="7.5" y="86.5" width="320" height="320"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="k2e-CE-pGq" secondAttribute="height" multiplier="1:1" id="uwa-Uj-mmK"/>
@@ -98,8 +99,8 @@
                                             <outletCollection property="gestureRecognizers" destination="obW-Fo-WGJ" appends="YES" id="LD7-kL-XaZ"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X7w-n6-E0A" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="41.5" y="452.5" width="252" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="X7w-n6-E0A" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <rect key="frame" x="41.5" y="458.5" width="252" height="44"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -120,6 +121,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Z0y-Hj-aJs">
                             <connections>
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="GzW-qC-eX1"/>
+                                <segue destination="7TB-EH-Pft" kind="unwind" unwindAction="unwindtoMeallistWithSender:" id="bWs-tb-TBr"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="nh7-zq-yAa">
@@ -180,10 +182,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MJz-1I-fGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071.2" y="136.28185907046478"/>
+            <point key="canvasLocation" x="1137" y="-296"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="320" height="320"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KXp-Qu-aDd"/>
+    </inferredMetricsTieBreakers>
 </document>
