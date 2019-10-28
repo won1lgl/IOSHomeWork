@@ -23,9 +23,16 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         nameTextField.delegate = self
+        
+        updateSaveButtonState()
     }
     
     //MARK:UItextFieldDelagate
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        //Disable the button while editing
+        saveButton.isEnabled = false
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //hide the keyboard
         textField.resignFirstResponder()
@@ -34,6 +41,8 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         //set the label value
+        updateSaveButtonState()
+        navigationItem.title = textField.text
     }
     
     //MARK:UIImagePickerControllerDelegate
@@ -51,6 +60,11 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     //MARK:Navigation
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
@@ -75,7 +89,12 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         present(imagePickerController, animated: true, completion: nil)
     }
     
-
+    //MARK:Private function
+    private func updateSaveButtonState() {
+        //Disable the button while tittle is empty
+        let text = nameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
 
 }
 
